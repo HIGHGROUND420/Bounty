@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Скрываем скроллбар для красоты, но оставляем прокрутку */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
