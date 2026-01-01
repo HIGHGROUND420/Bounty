@@ -40,20 +40,13 @@ Configuration files:
 - ✅ Set up workflow for development server
 
 ## Configuration
-### Airtable Integration (Optional)
-To enable Airtable backend, update `AIRTABLE_CONFIG` in `App.jsx`:
-```javascript
-const AIRTABLE_CONFIG = {
-  apiKey: "YOUR_AIRTABLE_PAT_KEY",
-  baseId: "YOUR_BASE_ID",
-  excursionsTable: "Excursions",
-  bookingsTable: "Bookings",
-  exchangeTable: "Exchange"
-};
-```
+### Required API Keys (Secrets)
+Add these keys in the **Secrets** tab for full functionality:
+- `VITE_GEMINI_API_KEY`: For AI Chat recommendations.
+- `VITE_AIRTABLE_API_KEY`: Personal Access Token for Airtable.
+- `VITE_AIRTABLE_BASE_ID`: Your Airtable Base ID.
 
-### Gemini API (Optional)
-The AI chat requires a Gemini API key. Add it as an environment variable or update the `callGemini` function.
+The app will gracefully fallback to **Demo Mode** if these are missing.
 
 ## Running the App
 - Development: `npm run dev` (runs on http://localhost:5000)
